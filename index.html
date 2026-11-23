@@ -106,6 +106,12 @@ input[type=range]{width:100%;accent-color:var(--o);height:34px;margin-top:6px}
 .more{margin-top:18px;background:var(--ink)}
 .more:hover{background:#242a40}
 #outros[hidden]{display:none}
+.strip{margin-top:30px;padding:15px 20px;border-radius:12px;background:var(--o);color:#fff;font-size:clamp(18px,2vw,22px);font-weight:900;line-height:1.2}
+.more-h{font-size:clamp(25px,3vw,34px);margin-top:48px}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.group{background:var(--ink3);border-radius:15px;padding:22px}
+.group b{display:block;color:var(--o2);font-size:18px}
+.group .checks{margin-top:12px;gap:7px;font-size:15px;color:#dfe1ea}
 
 .apps{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .phones{display:flex;justify-content:center;gap:16px}
@@ -149,7 +155,8 @@ footer{padding:26px 0;color:var(--mutd);font-size:14px}
 @media(max-width:900px){
  section{padding:62px 0}
  .hero-g,.apps,.prices,.calc{grid-template-columns:1fr}
- .stages,.feats,.cards{grid-template-columns:1fr 1fr}
+ .hero-logo{margin-left:auto;margin-right:auto}
+ .stages,.feats,.cards,.groups{grid-template-columns:1fr 1fr}
  .proof{grid-template-columns:1fr 1fr}
  .proof div:nth-child(3){border-left:0}
  .proof div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.25)}
@@ -157,7 +164,7 @@ footer{padding:26px 0;color:var(--mutd);font-size:14px}
  .zn{justify-content:center}
 }
 @media(max-width:600px){
- .stages,.feats,.cards,.res{grid-template-columns:1fr}
+ .stages,.feats,.cards,.groups,.res{grid-template-columns:1fr}
  .calc,.price,.ze{padding:22px}
  .ctas .btn{width:100%}
  .parc{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
@@ -187,8 +194,8 @@ footer{padding:26px 0;color:var(--mutd);font-size:14px}
 </header>
 
 <div class="proof">
-  <div><b>+330</b>veículos na Zé Loc</div>
-  <div><b>+300</b>locatários ativos</div>
+  <div><b>+3.100</b>veículos nas locadoras do sistema</div>
+  <div><b>4</b>locadoras: Zé Loc, Grid, Raposo e Fortal</div>
   <div><b>1</b>sistema para toda a operação</div>
   <div><b>2</b>apps nas lojas com a sua marca</div>
 </div>
@@ -238,6 +245,19 @@ footer{padding:26px 0;color:var(--mutd);font-size:14px}
       <div class="feat"><b>VozChat no WhatsApp</b><p>Atendimento, funil de leads e disparos num só lugar, para responder rápido e fechar mais contratos.</p></div>
       <div class="feat"><b>Inteligência artificial</b><p>IA integrada para agilizar o atendimento e ajudar a encontrar gargalos na operação.</p></div>
       <div class="feat"><b>Relatórios para decidir</b><p>Receita, inadimplência, custo e lucro por moto. Você vê onde ganha e onde está perdendo.</p></div>
+      <div class="feat"><b>Monitoramento da equipe</b><p>Cada pessoa com o seu perfil de acesso e auditoria de quem fez o quê, e quando.</p></div>
+      <div class="feat"><b>Cobrança no automático</b><p>Lembrete com Pix no WhatsApp, régua de atraso e aviso de multa, sem ninguém precisar lembrar.</p></div>
+      <div class="feat"><b>Frota no mapa</b><p>Com rastreador integrado, posição, KM, alertas e bloqueio por atraso dentro do próprio sistema.</p></div>
+    </div>
+
+    <h3 class="more-h">E tem muito mais dentro do sistema</h3>
+    <div class="groups">
+      <div class="group"><b>Equipe e segurança</b><ul class="checks"><li>Perfis de admin, atendente, mecânico e vistoriador</li><li>Auditoria das ações da equipe</li><li>Calendário e notificações no app</li><li>Backups 2 vezes por dia e monitoramento</li></ul></div>
+      <div class="group"><b>Clientes e contratos</b><ul class="checks"><li>Kanban de clientes e prospectos</li><li>Origem de cada lead e funil até o contrato</li><li>Disparos em massa para a carteira</li><li>Aditivos, troca de moto e quitação</li></ul></div>
+      <div class="group"><b>Frota</b><ul class="checks"><li>Situação, documentos e histórico de cada moto</li><li>Controle de sinistros</li><li>Investidores e fechamento do mês</li><li>Vistoria de entrega, devolução e periódica</li></ul></div>
+      <div class="group"><b>Oficina</b><ul class="checks"><li>Tabela de preço por oficina</li><li>Alerta de serviço acima da tabela</li><li>Estoque de peças</li><li>Fechamento mensal por oficina</li></ul></div>
+      <div class="group"><b>Financeiro</b><ul class="checks"><li>Contas a receber e a pagar</li><li>Caixa por banco</li><li>Juros e multa por atraso calculados</li><li>Caução, acordos e negativados</li></ul></div>
+      <div class="group"><b>Relatórios</b><ul class="checks"><li>Receita e projeção</li><li>Inadimplência e juros</li><li>Rentabilidade por moto</li><li>Custo de oficina e funil de clientes</li></ul></div>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Telas do sistema" id="tabs"></div>
@@ -261,11 +281,16 @@ footer{padding:26px 0;color:var(--mutd);font-size:14px}
     <div class="cards">
       <article class="pj"><img src="img/clientes/grid.png" alt="" /><h3>Grid Locadora</h3><em>+2.500 carros</em><p>Contratos, vistorias e financeiro numa operação de grande porte.</p></article>
       <article class="pj"><img src="img/clientes/raposo.png" alt="" /><h3>Raposo Motors</h3><em>+150 veículos</em><p>Locação de motos e carros elétricos, com gestão completa da frota.</p></article>
+      <article class="pj"><img src="img/clientes/fortal.png" alt="" /><h3>Fortal Loca &amp; Vende</h3><em>+150 veículos</em><p>Locadora de motos com investidores que também escolheu o sistema.</p></article>
+    </div>
+    <div class="strip">Outros projetos na área de veículos</div>
+    <div class="cards">
       <article class="pj"><img src="img/clientes/agillock-escuro.png" alt="" /><h3>ÁgilLock</h3><em>+10.000 veículos</em><p>Rastreamento GPS e bloqueio remoto, com painel, app e financeiro.</p></article>
+      <article class="pj"><img src="img/clientes/safelock.png" alt="" /><h3>SafeLock</h3><em>+300 consultas por dia</em><p>Análise de risco de locatários pelo WhatsApp: lê a CNH, consulta e entrega um laudo com o veredito.</p></article>
+      <article class="pj"><img src="img/clientes/iapro.jpg" alt="" style="border-radius:8px" /><h3>IAPRO</h3><em>+10.000 associados</em><p>Proteção veicular com gestão de associados, cotação e vistoria por link.</p></article>
     </div>
     <button class="btn more" id="maisBtn" aria-expanded="false" aria-controls="outros">E mais projetos em outras áreas</button>
     <div class="cards" id="outros" hidden>
-      <article class="pj"><img src="img/clientes/safelock.png" alt="" /><h3>SafeLock</h3><em>+300 consultas por dia</em><p>Análise de risco de locatários pelo WhatsApp: lê a CNH, consulta e entrega um laudo com o veredito.</p></article>
       <article class="pj"><img src="img/clientes/vozchat.png" alt="" /><h3>VozChat</h3><em>+100 empresas</em><p>Plataforma de WhatsApp com vários atendentes, quadro de leads e disparos, para diversos segmentos.</p></article>
     </div>
     <p class="note">Já usa ÁgilLock ou SafeLock? Elas entram integradas ao sistema. Usa outro fornecedor? Avaliamos a integração na implantação.</p>
