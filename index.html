@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Proposta Alug Já</title>
+<meta name="description" content="Um sistema completo, com a marca da Alug Já, para colocar mais motos na rua com menos operação." />
+<meta name="theme-color" content="#F85702" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Proposta · Alug Já" />
+<meta property="og:url" content="https://pedcastr.github.io/proposta-alugja/" />
+<meta property="og:title" content="Alug Já · mais motos na rua, menos operação" />
+<meta property="og:description" content="O sistema completo que sustenta a Zé Loc, com mais de 330 veículos, agora com a marca da Alug Já e app nas lojas." />
+<meta property="og:image" content="https://pedcastr.github.io/proposta-alugja/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://pedcastr.github.io/proposta-alugja/og-image.png" />
+<link rel="icon" href="img/favicon.png" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
+<style>
+:root{--o:#F85702;--o2:#FF7A2E;--navy:#0B2F86;--lime:#A8E228;--ink:#10131f;--ink2:#181c2b;--ink3:#232839;--line:rgba(255,255,255,.11);--paper:#fff8f2;--paper2:#ffeadb;--txt:#191c28;--mut:#5d6072;--mutd:#aeb2c4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Archivo,system-ui,sans-serif;background:var(--ink);color:#fff;line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100%);margin:auto;padding:0 20px}
+section{padding:84px 0}
+.light{background:var(--paper);color:var(--txt)}
+.label{display:block;color:var(--o);font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+h1,h2,h3{line-height:1.06;letter-spacing:-.025em;font-stretch:112%}
+h1{font-size:clamp(40px,6vw,70px);font-weight:900}
+h2{font-size:clamp(30px,4.3vw,50px);font-weight:900;max-width:880px}
+h1 em,h2 em{font-style:normal;color:var(--o)}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--mutd);max-width:760px;margin-top:18px}
+.light .lead{color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:12px;background:var(--o);color:#fff;font-weight:800;text-decoration:none;border:0;font-family:inherit;font-size:16px;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#e04d00;transform:translateY(-2px)}
+.btn.line{background:transparent;border:1.5px solid rgba(255,255,255,.3)}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+
+.hero{padding:44px 0 70px;background:radial-gradient(circle at 85% 18%,rgba(248,87,2,.42),transparent 42%),radial-gradient(circle at 0 100%,rgba(11,47,134,.65),transparent 45%),var(--ink)}
+.hero-g{display:grid;grid-template-columns:1.02fr 1fr;gap:48px;align-items:center}
+.hero-logo{width:118px;height:118px;margin-bottom:24px;filter:drop-shadow(0 12px 28px rgba(248,87,2,.45))}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.win{background:#0a0c15;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 34px 70px -24px rgba(0,0,0,.9)}
+.win-top{display:flex;align-items:center;gap:6px;height:34px;padding:0 13px;background:#1a1d2a;font-size:12px;color:var(--mutd)}
+.win-top i{width:9px;height:9px;border-radius:50%;background:#454a60}
+.win-top span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cap{font-size:13px;color:var(--mutd);margin-top:10px}
+.light .cap{color:var(--mut)}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);background:var(--o)}
+.proof div{padding:22px 18px;text-align:center;border-left:1px solid rgba(255,255,255,.25);font-weight:700;font-size:14px;line-height:1.25}
+.proof div:first-child{border:0}
+.proof b{display:block;font-size:clamp(25px,3vw,36px);font-weight:900;margin-bottom:4px}
+
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+.stage{background:#fff;border:1px solid #f3d9c8;border-radius:16px;padding:26px}
+.stage.hot{background:var(--o);border-color:var(--o);color:#fff}
+.stage small{font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--o)}
+.stage.hot small{color:#fff}
+.stage h3{font-size:27px;margin:8px 0 10px}
+.stage p{color:var(--mut)}
+.stage.hot p{color:#fff}
+.calc{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;background:var(--ink);color:#fff;border-radius:20px;padding:32px;margin-top:30px}
+.calc h3{font-size:30px}
+.calc label{display:flex;justify-content:space-between;font-weight:700;margin-top:24px}
+.calc output{color:var(--lime);font-size:22px;font-weight:900}
+input[type=range]{width:100%;accent-color:var(--o);height:34px;margin-top:6px}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.res div{background:var(--ink3);border-radius:12px;padding:17px}
+.res b{display:block;font-size:clamp(23px,2.7vw,31px);font-weight:900;line-height:1.1}
+.res span{font-size:14px;color:var(--mutd)}
+.res .big{grid-column:1/-1;background:var(--o)}
+.res .big span{color:#fff}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
+.calc .note,.light .calc .lead{color:var(--mutd)}
+
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.feat{background:var(--ink2);border:1px solid var(--line);border-radius:15px;padding:23px}
+.feat b{display:block;font-size:19px;line-height:1.2;margin-bottom:7px}
+.feat b::before{content:"";display:block;width:26px;height:5px;border-radius:9px;background:var(--o);margin-bottom:14px}
+.feat p{color:var(--mutd);font-size:15.5px}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:44px 0 14px;padding-bottom:6px}
+.tab{flex:none;min-height:42px;padding:0 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:#fff;font:700 14px Archivo,sans-serif;cursor:pointer}
+.tab.on{background:var(--o);border-color:var(--o)}
+
+.ze{display:grid;grid-template-columns:230px 1fr;gap:38px;align-items:center;background:#fff;border:1px solid #f3d9c8;border-radius:22px;padding:34px;margin-top:38px}
+.ze img{width:100%;max-width:210px;margin:auto}
+.ze h3{font-size:clamp(26px,3vw,36px)}
+.ze p{color:var(--mut);margin-top:12px}
+.zn{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:20px}
+.zn b{display:block;color:var(--o);font-size:36px;font-weight:900;line-height:1}
+.zn span{font-size:14px;color:var(--mut);font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.pj{background:#fff;border:1px solid #f3d9c8;border-radius:15px;padding:22px}
+.pj img{height:48px;width:auto;max-width:150px;object-fit:contain;margin-bottom:14px}
+.pj h3{font-size:21px}
+.pj em{display:block;font-style:normal;font-weight:900;color:var(--o);margin:4px 0 7px}
+.pj p{font-size:15px;color:var(--mut)}
+.more{margin-top:18px;background:var(--ink)}
+.more:hover{background:#242a40}
+#outros[hidden]{display:none}
+
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.phones{display:flex;justify-content:center;gap:16px}
+.phone{width:min(46%,250px);padding:7px;border-radius:30px;background:#05060c;box-shadow:0 26px 50px -18px #000,inset 0 0 0 1.5px #3a3f55}
+.phone img{border-radius:24px}
+.checks{list-style:none;margin-top:22px;display:grid;gap:10px}
+.checks li{position:relative;padding-left:26px}
+.checks li::before{content:"";position:absolute;left:2px;top:6px;width:13px;height:7px;border-left:3px solid var(--lime);border-bottom:3px solid var(--lime);transform:rotate(-45deg)}
+.light .checks li::before{border-color:var(--o)}
+.team{display:flex;gap:14px;overflow-x:auto;margin-top:38px;padding-bottom:10px}
+.team figure{flex:0 0 190px}
+.team img{border-radius:18px;border:1px solid var(--line)}
+.team figcaption{font-size:14px;color:var(--mutd);margin-top:8px}
+
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.price{background:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:30px}
+.price.main{background:var(--o);border-color:var(--o)}
+.price .k{font-weight:800;letter-spacing:.07em;text-transform:uppercase;font-size:14px}
+.amount{font-size:clamp(44px,6vw,66px);font-weight:900;line-height:1.05;margin:8px 0 4px;letter-spacing:-.03em}
+.amount small{font-size:19px;letter-spacing:0;font-weight:700}
+.parc{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:20px 0}
+.parc div{background:rgba(0,0,0,.2);border-radius:9px;padding:9px 2px;text-align:center;font-size:13px;font-weight:800}
+.parc small{display:block;font-weight:600}
+.main .checks li::before{border-color:#fff}
+.plan{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;text-align:left;min-height:68px;margin-top:10px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--line);background:transparent;color:#fff;font-family:inherit;font-size:15px;cursor:pointer}
+.plan.on{border-color:var(--o);background:rgba(248,87,2,.16)}
+.plan b{display:block;font-size:17px}
+.plan strong{white-space:nowrap;font-size:18px}
+.date{background:var(--ink3);border-radius:12px;padding:14px 16px;margin-top:14px}
+.third{font-size:14px;color:var(--mutd);margin-top:18px;max-width:900px}
+.cta{text-align:center}
+.cta img{width:120px;margin:0 auto 22px}
+.cta h2,.cta .lead{margin-left:auto;margin-right:auto}
+.cta .ctas{justify-content:center}
+.cta .btn.line{border-color:#d9b9a4;color:var(--txt)}
+.cta .btn.line:hover{background:var(--paper2)}
+footer{padding:26px 0;color:var(--mutd);font-size:14px}
+.fab{position:fixed;right:16px;bottom:16px;z-index:20;display:flex;align-items:center;gap:8px;min-height:50px;padding:0 18px;border-radius:99px;background:#1fae57;color:#fff;font-weight:800;text-decoration:none;box-shadow:0 12px 26px rgba(0,0,0,.4)}
+.fab svg{width:22px;height:22px;fill:#fff}
+
+@media(max-width:900px){
+ section{padding:62px 0}
+ .hero-g,.apps,.prices,.calc{grid-template-columns:1fr}
+ .stages,.feats,.cards{grid-template-columns:1fr 1fr}
+ .proof{grid-template-columns:1fr 1fr}
+ .proof div:nth-child(3){border-left:0}
+ .proof div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.25)}
+ .ze{grid-template-columns:1fr;text-align:center}
+ .zn{justify-content:center}
+}
+@media(max-width:600px){
+ .stages,.feats,.cards,.res{grid-template-columns:1fr}
+ .calc,.price,.ze{padding:22px}
+ .ctas .btn{width:100%}
+ .parc{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+ .parc div{font-size:11px}
+ .fab span{display:none}
+ .fab{width:54px;padding:0;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-g">
+    <div>
+      <img class="hero-logo" src="img/logo-insta.png" alt="Alug Já" />
+      <span class="label">Proposta exclusiva para a Alug Já</span>
+      <h1>Mais motos na rua. <em>Menos operação.</em></h1>
+      <p class="lead">A plataforma mais completa para locadora de motos, com a sua marca, para a Alug Já crescer sem que a equipe e os custos cresçam junto.</p>
+      <div class="ctas"><a class="btn" href="#investimento">Ver o investimento</a><a class="btn line" href="#simulador">Simular meu ganho</a></div>
+    </div>
+    <div>
+      <div class="win"><div class="win-top"><i></i><i></i><i></i><span>sistema.alugja.com.br/painel</span></div><img src="img/sistema/dash-topo.jpg" alt="Painel do sistema com a marca Alug Já" /></div>
+      <p class="cap">Tela real do sistema com a marca da Alug Já · dados de demonstração</p>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div><b>+330</b>veículos na Zé Loc</div>
+  <div><b>+300</b>locatários ativos</div>
+  <div><b>1</b>sistema para toda a operação</div>
+  <div><b>2</b>apps nas lojas com a sua marca</div>
+</div>
+
+<section class="light">
+  <div class="wrap">
+    <span class="label">O gargalo</span>
+    <h2>Toda locadora trava em algum ponto. <em>O sistema tira esse teto.</em></h2>
+    <p class="lead">Com ferramenta genérica, cada moto nova traz mais cobrança, mais multa e mais conferência manual. Crescer passa a exigir contratar. É aí que a empresa para de ganhar escala.</p>
+    <div class="stages">
+      <div class="stage"><small>Até 50 motos</small><h3>Dá para levar</h3><p>Planilha e WhatsApp ainda funcionam, mas tudo depende do dono e de quem lembra de cada detalhe.</p></div>
+      <div class="stage"><small>De 50 a 100 motos</small><h3>Começa a travar</h3><p>Multa passa sem repasse, atraso demora a ser visto e a equipe vira digitadora de informação.</p></div>
+      <div class="stage hot"><small>Acima de 100 motos</small><h3>Sem sistema, inviável</h3><p>Sem automação, cada novo contrato pesa na operação. Com o sistema, a mesma equipe atende até 40% mais motos.</p></div>
+    </div>
+
+    <div class="calc" id="simulador">
+      <div>
+        <h3>Quanto a Alug Já pode ganhar?</h3>
+        <p class="lead" style="font-size:16px">Arraste para o tamanho da frota. O cálculo usa a semana a partir de R$ 349 da CG Start.</p>
+        <label for="motos">Motos alugadas <output id="motosV">100</output></label>
+        <input id="motos" type="range" min="20" max="500" step="10" value="100" />
+        <p class="note">Estimativa de referência, não é garantia de resultado. Considera 2% do faturamento recuperado em atrasos, R$ 12 por moto/mês em multas que deixariam de ser repassadas e 45 min por moto/mês de trabalho manual a R$ 20/hora.</p>
+      </div>
+      <div class="res">
+        <div class="big"><b id="rGanho"></b><span>de ganho estimado por mês</span></div>
+        <div><b id="rHoras"></b><span>de trabalho manual a menos por mês</span></div>
+        <div><b id="rCap"></b><span>motos com a mesma equipe (+40%)</span></div>
+        <div><b id="rAno"></b><span>de ganho estimado em 12 meses</span></div>
+        <div><b id="rPay"></b><span>para a implantação se pagar</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="label">O sistema</span>
+    <h2>Não é um custo a mais. <em>É o que eleva o nível da empresa.</em></h2>
+    <p class="lead">Cada rotina que hoje consome a equipe passa a acontecer sozinha, fica registrada e vira informação para decidir melhor.</p>
+    <div class="feats">
+      <div class="feat"><b>Multas automáticas</b><p>A multa chega ao sistema, encontra quem estava com a moto e já entra na semana do locatário.</p></div>
+      <div class="feat"><b>Banco conciliado</b><p>Pix e boleto integrados ao banco. Pagou, a semana é baixada sozinha e o caixa fecha com o extrato.</p></div>
+      <div class="feat"><b>Oficina com aplicativo</b><p>Não tem oficina própria? O mecânico parceiro gera a OS no app e você aprova pelo celular.</p></div>
+      <div class="feat"><b>Troca de óleo registrada</b><p>Cada troca fica no histórico da moto, com foto, vídeo e comprovante enviados pelo locatário.</p></div>
+      <div class="feat"><b>Vistoria padrão Localiza</b><p>Item a item, com fotos pela câmera, assinatura e selfie do locatário. Tudo documentado.</p></div>
+      <div class="feat"><b>Contrato em minutos</b><p>Contrato preenchido, assinatura digital com selfie e cobranças geradas sem digitar nada duas vezes.</p></div>
+      <div class="feat"><b>VozChat no WhatsApp</b><p>Atendimento, funil de leads e disparos num só lugar, para responder rápido e fechar mais contratos.</p></div>
+      <div class="feat"><b>Inteligência artificial</b><p>IA integrada para agilizar o atendimento e ajudar a encontrar gargalos na operação.</p></div>
+      <div class="feat"><b>Relatórios para decidir</b><p>Receita, inadimplência, custo e lucro por moto. Você vê onde ganha e onde está perdendo.</p></div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Telas do sistema" id="tabs"></div>
+    <div class="win"><div class="win-top"><i></i><i></i><i></i><span id="shotUrl"></span></div><img id="shot" alt="" /></div>
+    <p class="cap" id="shotCap"></p>
+  </div>
+</section>
+
+<section class="light" id="referencia">
+  <div class="wrap">
+    <span class="label">A referência</span>
+    <h2>A Zé Loc já provou <em>na rua.</em></h2>
+    <div class="ze">
+      <img src="img/clientes/zeloc.png" alt="Zé Loc" />
+      <div>
+        <h3>A empresa que fez a ponte para tudo isso funcionar.</h3>
+        <p>Foi na operação real da Zé Loc que este sistema foi construído e validado, todos os dias. A Alug Já não recebe uma promessa: recebe uma plataforma já testada por uma locadora de motos de Fortaleza.</p>
+        <div class="zn"><div><b>+330</b><span>veículos</span></div><div><b>+300</b><span>locatários ativos</span></div></div>
+      </div>
+    </div>
+    <div class="cards">
+      <article class="pj"><img src="img/clientes/grid.png" alt="" /><h3>Grid Locadora</h3><em>+2.500 carros</em><p>Contratos, vistorias e financeiro numa operação de grande porte.</p></article>
+      <article class="pj"><img src="img/clientes/raposo.png" alt="" /><h3>Raposo Motors</h3><em>+150 veículos</em><p>Locação de motos e carros elétricos, com gestão completa da frota.</p></article>
+      <article class="pj"><img src="img/clientes/agillock-escuro.png" alt="" /><h3>ÁgilLock</h3><em>+10.000 veículos</em><p>Rastreamento GPS e bloqueio remoto, com painel, app e financeiro.</p></article>
+    </div>
+    <button class="btn more" id="maisBtn" aria-expanded="false" aria-controls="outros">E mais projetos em outras áreas</button>
+    <div class="cards" id="outros" hidden>
+      <article class="pj"><img src="img/clientes/safelock.png" alt="" /><h3>SafeLock</h3><em>+300 consultas por dia</em><p>Análise de risco de locatários pelo WhatsApp: lê a CNH, consulta e entrega um laudo com o veredito.</p></article>
+      <article class="pj"><img src="img/clientes/vozchat.png" alt="" /><h3>VozChat</h3><em>+100 empresas</em><p>Plataforma de WhatsApp com vários atendentes, quadro de leads e disparos, para diversos segmentos.</p></article>
+    </div>
+    <p class="note">Já usa ÁgilLock ou SafeLock? Elas entram integradas ao sistema. Usa outro fornecedor? Avaliamos a integração na implantação.</p>
+  </div>
+</section>
+
+<section style="background:linear-gradient(180deg,var(--ink),#2a1408 60%,var(--ink))">
+  <div class="wrap">
+    <div class="apps">
+      <div>
+        <span class="label">Sua marca nas lojas</span>
+        <h2>A Alug Já na Google Play <em>e na App Store.</em></h2>
+        <p class="lead">Um aplicativo com o nome, a logo e as cores da Alug Já. Isso gera confiança no cliente e coloca a empresa em outro patamar diante da concorrência.</p>
+        <ul class="checks">
+          <li>O locatário paga no Pix e acompanha contrato e multas</li>
+          <li>Vistoria e troca de óleo feitas pelo celular</li>
+          <li>A equipe aprova OS e recebe alertas no próprio app</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="phone"><img src="img/loja/loja-google-play.jpg" alt="App da Alug Já na Google Play" loading="lazy" /></div>
+        <div class="phone"><img src="img/loja/loja-app-store.jpg" alt="App da Alug Já na App Store" loading="lazy" /></div>
+      </div>
+    </div>
+    <div class="team">
+      <figure><img src="img/loja/tela-inicio.jpg" alt="" loading="lazy" /><figcaption>App do locatário</figcaption></figure>
+      <figure><img src="img/loja/tela-financeiro.jpg" alt="" loading="lazy" /><figcaption>Pagamentos no Pix</figcaption></figure>
+      <figure><img src="img/app-equipe/inicio.jpg" alt="" loading="lazy" /><figcaption>App da equipe</figcaption></figure>
+      <figure><img src="img/app-equipe/notificacao.jpg" alt="" loading="lazy" /><figcaption>OS para aprovar</figcaption></figure>
+      <figure><img src="img/app-equipe/contratos.jpg" alt="" loading="lazy" /><figcaption>Contratos no bolso</figcaption></figure>
+      <figure><img src="img/app-equipe/multas.jpg" alt="" loading="lazy" /><figcaption>Multas no celular</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="investimento">
+  <div class="wrap">
+    <span class="label">Investimento</span>
+    <h2>Uma plataforma completa, <em>com a cara da Alug Já.</em></h2>
+    <div class="prices">
+      <div class="price main">
+        <span class="k">Implantação</span>
+        <div class="amount"><small>R$</small> 25.000</div>
+        <p>em 5 parcelas de R$ 5.000</p>
+        <div class="parc"><div><small>1ª</small>R$ 5 mil</div><div><small>2ª</small>R$ 5 mil</div><div><small>3ª</small>R$ 5 mil</div><div><small>4ª</small>R$ 5 mil</div><div><small>5ª</small>R$ 5 mil</div></div>
+        <ul class="checks">
+          <li>Sistema completo de locação com a sua marca</li>
+          <li>App na Google Play e na App Store</li>
+          <li>Integração com banco, multas e assinatura digital</li>
+          <li>Importação dos dados e treinamento da equipe</li>
+        </ul>
+      </div>
+      <div class="price">
+        <span class="k">Manutenção mensal</span>
+        <div class="amount"><small>R$</small> <span id="mens">2.500</span><small>/mês</small></div>
+        <button class="plan on" data-v="2.500"><span><b>Com VozChat</b>Sistema + WhatsApp integrado</span><strong>R$ 2.500</strong></button>
+        <button class="plan" data-v="2.000"><span><b>Sem VozChat</b>Somente o sistema</span><strong>R$ 2.000</strong></button>
+        <div class="date"><b>Primeiro pagamento da manutenção: 20 de janeiro de 2027</b></div>
+      </div>
+    </div>
+    <p class="third">Custos de terceiros ficam na conta da empresa: mensagens oficiais do WhatsApp cobradas pela Meta, tarifas bancárias de Pix e boleto, rastreamento e consultas de análise.</p>
+  </div>
+</section>
+
+<section class="light cta">
+  <div class="wrap">
+    <img src="img/logo-insta.png" alt="Alug Já" />
+    <h2>Vamos levar a Alug Já <em>para o próximo nível?</em></h2>
+    <p class="lead">Mais contratos, mais controle e menos custo operacional, numa plataforma feita para locação de motos.</p>
+    <div class="ctas"><a class="btn" id="waBtn" target="_blank" rel="noopener">Quero avançar pelo WhatsApp</a><a class="btn line" href="#investimento">Rever o investimento</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Proposta preparada por <b style="color:#fff">Pedro Castro</b> para a <a href="https://www.instagram.com/alugjamotos/" target="_blank" rel="noopener">@alugjamotos</a> · novembro de 2026</div></footer>
+
+<a class="fab" id="waFab" target="_blank" rel="noopener" aria-label="Falar com Pedro no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-3-1-5.6-3.5-6.8-6.1-.5-1.1-.6-2.4.4-3.5.3-.3.6-.4.9-.4h.6c.2 0 .5 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.7 1c-.1.2-.2.4 0 .6.7 1.2 1.7 2.1 3 2.7.2.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.5.2.6.4.6.6.1.2.1.6.2.9Z"/></svg><span>Falar no WhatsApp</span></a>
+
+<script>
+(function(){
+  var wa='https://wa.me/5585992010562?text='+encodeURIComponent('Olá, Pedro! Vi a proposta do sistema da Alug Já e quero conversar.');
+  document.getElementById('waBtn').href=wa;document.getElementById('waFab').href=wa;
+  var $=function(i){return document.getElementById(i)};
+  var brl=function(v){return 'R$ '+Math.round(v).toLocaleString('pt-BR')};
+  function calc(){
+    var m=+$('motos').value,fat=m*349*52/12,horas=m*.75,ganho=fat*.02+m*12+horas*20,meses=25000/Math.max(1,ganho-2500);
+    $('motosV').textContent=m;$('rGanho').textContent=brl(ganho);$('rHoras').textContent=Math.round(horas)+' h';
+    $('rCap').textContent=Math.round(m*1.4);$('rAno').textContent=brl(ganho*12);
+    $('rPay').textContent=ganho<=2500?'Acima de 24 meses':(meses>24?'Acima de 24 meses':'≈ '+Math.ceil(meses)+(Math.ceil(meses)===1?' mês':' meses'));
+  }
+  $('motos').addEventListener('input',calc);calc();
+
+  var S=[['Dashboard','dash-topo','painel','Indicadores da operação em uma tela.'],['Financeiro','dash-dinheiro','painel/financeiro','Recebido, despesas e lucro do período.'],['Multas','multas','veiculos/multas','Multas com o locatário e a cobrança vinculados.'],['Multa na semana','multa-semana','financeiro/pagamentos','Aluguel e multa na mesma cobrança.'],['Troca de óleo','manutencao','oficina/manutencoes','Plano de manutenção de cada moto.'],['Ordens de serviço','os','oficina/ordens-servico','OS da oficina esperando a sua aprovação.'],['Oficinas','oficinas','oficina/oficinas','Quanto cada oficina recebeu e tem a receber.'],['Vistoria','vistoria','veiculos/vistorias','Vistoria item a item feita pelo celular.'],['Mapa da frota','mapa','veiculos/mapa','Toda a frota no mapa, com filtros de atraso e movimento.'],['Contas a pagar','contas-pagar','financeiro/contas-a-pagar','Despesas com vencimento, categoria e baixa.']];
+  var T=$('tabs');
+  function show(i){var s=S[i];$('shot').src='img/sistema/'+s[1]+'.jpg';$('shot').alt=s[0]+', tela do sistema';$('shotUrl').textContent='sistema.alugja.com.br/'+s[2];$('shotCap').textContent=s[3]+' Dados de demonstração.';[].forEach.call(T.children,function(b,j){b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i)})}
+  S.forEach(function(s,i){var b=document.createElement('button');b.className='tab';b.type='button';b.setAttribute('role','tab');b.textContent=s[0];b.onclick=function(){show(i)};T.appendChild(b)});show(0);
+
+  $('maisBtn').onclick=function(){var o=$('outros'),a=o.hidden;o.hidden=!a;this.setAttribute('aria-expanded',a);this.textContent=a?'Ocultar outros projetos':'E mais projetos em outras áreas'};
+  var P=document.querySelectorAll('.plan');[].forEach.call(P,function(b){b.onclick=function(){[].forEach.call(P,function(x){x.classList.remove('on')});b.classList.add('on');$('mens').textContent=b.dataset.v}});
+})();
+</script>
+</body>
+</html>
